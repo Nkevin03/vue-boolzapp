@@ -19,6 +19,11 @@ body{
     align-items: center;
 }
 
+#app {
+    width: 80%;
+    height: 95%;
+}
+
 /* Utilities */
 
 img{
@@ -31,18 +36,17 @@ img{
 
 .container{
     display: flex;
-    width: 80%;
+    width: 100%;
     min-width: 900px;
-    height: 95%;
+    height: 100%;
     background-color: #dfe0d9;
-    border: 1px solid black;
     overflow: hidden;
 }
 
 /* Aside */
 
 aside{
-    width: 35%;
+    width: 36%;
     height: 100%;
 }
 
@@ -54,7 +58,11 @@ aside{
 .user{
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 65%;
+}
+
+.user h3{
+    font-weight: 500;
 }
 
 .icon{
@@ -103,7 +111,6 @@ aside{
 
 .chat-aside{
     background-color: #fff;
-    padding: 3px;
     height: 100%;
     width: 100%;
 }
@@ -138,10 +145,120 @@ aside{
 .users{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #f6f6f6;
+    border-top: 1px solid #f6f6f6;
     width: 100%;
 }
 
-.users:last-child{
-    border-bottom: 0px;
+.users:hover{
+    background-color: #bababa;
+}
+
+.users h3{
+    font-weight: 500;
+}
+
+/* Navbar right */
+
+.chat{
+    width: 100%;
+}
+
+.info-user{
+    width: 50%;
+}
+
+.user-chat{
+    display: flex;
+    align-items: center;
+    background-color: #d7d7d7;
+    border-left: 1px solid #bababa;
+}
+
+/* Message chat */
+
+.chat-message{
+    background-image: url(../img/mine.jpg);
+    height: 82%;
+    width: 100%;
+}
+
+.conversation{
+    padding: 60px 150px;
+}
+
+.message-text{
+    display: flex;
+    justify-content: end;
+}
+
+.send{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ddfabf;
+    height: 50px;
+    padding: 0 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.send h4{
+    width: 100%;
+    font-weight: 400;
+}
+
+.time{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.time p{
+    font-size: 10px;
+    color: #bababa;
+    width: 100%;
+}
+
+/* Received */
+
+.received{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 0 15px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.received h4{
+    width: 100%;
+    font-weight: 400;
+}
+
+/* Write message */
+
+.write-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d7d7d7;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.write-message input{
+    width: 90%;
+    height: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #bababa;
+}
+
+.write-message i{
+    font-size: 20px;
+    color: #777e82;
 }
