@@ -36,6 +36,7 @@ img{
     height: 95%;
     background-color: #dfe0d9;
     border: 1px solid black;
+    overflow: hidden;
 }
 
 /* Aside */
@@ -71,7 +72,7 @@ aside{
     cursor: pointer;
 }
 
-/* Notification */
+/* Notifications */
 
 .notifications{
     display: flex;
@@ -96,4 +97,51 @@ aside{
 
 .text-not a{
     color: #5e7f91;
+}
+
+/* Chat aside */
+
+.chat-aside{
+    background-color: #fff;
+    padding: 3px;
+    height: 100%;
+    width: 100%;
+}
+
+.search-chat{
+    display: flex;
+    align-items: center;
+    background-color: #fbfbfb;
+    padding: 5px;
+}
+
+.search-chat i{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 20px;
+    color: #bababa;
+    height: 30px;
+    padding: 0 25px;
+    border: 1px solid #f6f6f6;
+    cursor: pointer;
+}
+
+.search-chat input{
+    height: 30px;
+    border: 1px solid #f6f6f6;
+    width: 100%;
+    padding: 0 20px;
+    color: #bababa;
+}
+
+.users{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+}
+
+.users:last-child{
+    border-bottom: 0px;
 }
