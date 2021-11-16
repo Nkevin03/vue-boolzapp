@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        #32a093 0%,
+        #32a093 15%,
+        #dde0db 15%,
+        #dde0db 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Utilities */
+
+img{
+    width: 60px;
+    border-radius: 30px;
+    margin: 15px;
+}
+
+/* Container */
+
+.container{
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    height: 95%;
+    background-color: #dfe0d9;
+    border: 1px solid black;
+}
+
+/* Aside */
+
+aside{
+    width: 35%;
+    height: 100%;
+}
+
+.nav-left{
+    display: flex;
+    background: #d7d7d7;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.icon{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.icon i{
+    margin: 10px;
+    color: #bababa;
+    font-size: 20px;
+}
