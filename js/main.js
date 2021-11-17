@@ -110,5 +110,15 @@ const app = new Vue ({
                 this.newMessage = '';
             }
         },
+
+        botAnswer() {
+            setTimeout(() => {
+                this.contacts[this.accountUsers].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'ok',
+                    status: 'received',
+                },);
+            },1000);
+        },
     }
 })
