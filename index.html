@@ -74,22 +74,17 @@
                     <div class="conversation">
                         <!-- Send Message -->
                         <div class="message-text">
-                            <div class="send">
-                                <div class="content-send">
-                                    <h4>{{contacts.messages}}</h4>
+                            <div v-for="(element, index) in contacts[accountUsers].messages"  :class="element.status">
+                                <div class="section-message">
+                                    <div class="message">
+                                        <div class="content-send">
+                                            <h4>{{element.text}}</h4>
+                                        </div>
+                                        <div class="time">
+                                            <p>10/01/2021 15.50.00</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="time">
-                                    <p>10/01/2021 15.50.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Received Message -->
-                        <div class="received">
-                            <div class="content-send">
-                                <h4>Messaggio ricevuto</h4>
-                            </div>
-                            <div class="time">
-                                <p>10/01/2021 15.50.00</p>
                             </div>
                         </div>
                     </div>

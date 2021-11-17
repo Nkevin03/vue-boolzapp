@@ -1,3 +1,4 @@
+ 
 *{
     padding: 0;
     margin: 0;
@@ -186,12 +187,16 @@ aside{
     padding: 60px 150px;
 }
 
-.message-text{
+
+.sent .section-message{
     display: flex;
     justify-content: end;
+    margin: 10px 0;
 }
 
-.send{
+
+
+.sent .message{
     position: relative;
     display: flex;
     align-items: center;
@@ -203,7 +208,7 @@ aside{
 }
 
 
-.send h4{
+.sent h4{
     width: 100%;
     font-weight: 400;
 }
