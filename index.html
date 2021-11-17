@@ -46,10 +46,10 @@
                 </div>
                 <!-- Chat aside -->
                 <div class="chat-aside">
-                    <div v-for="element in contacts" class="contact-chat">
+                    <div v-for="(person, index) in contacts" class="contact-chat" @click="getAccountUsers(index)">
                         <div class="users">
-                            <img :src=`./img/avatar${element.avatar}.jpg` alt="">
-                            <h3>{{element.name}}</h3>
+                            <img :src=`./img/avatar${contacts[index].avatar}.jpg` alt="">
+                            <h3>{{contacts[index].name}}</h3>
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,10 @@
             <section class="chat">
                 <div class="nav-right">
                     <div class="user-chat">
-                        <img :src=`./img/avatar${contacts[0].avatar}.jpg` alt="avatar_1">
+                        <img :src=`./img/avatar${contacts[accountUsers].avatar}.jpg` alt="avatar_1">
                         <div class="info-user">
-                            <h3>{{ contacts[0].name }}</h3>
-                            <p>Ultimo accesso oggi alle 10.35</p>
+                            <h3>{{contacts[accountUsers].name}}</h3>
+                            <p>Ultimo accesso</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-circle-notch"></i>
@@ -76,7 +76,7 @@
                         <div class="message-text">
                             <div class="send">
                                 <div class="content-send">
-                                    <h4>Messaggio inviato</h4>
+                                    <h4>{{contacts.messages}}</h4>
                                 </div>
                                 <div class="time">
                                     <p>10/01/2021 15.50.00</p>
@@ -103,6 +103,11 @@
             </section>
         </div>
     </div>
+
+    <!-- Script date -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/locale/it.js"></script>
+    <!-- Script -->
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -91,5 +91,12 @@ const app = new Vue ({
                 ],
             },
         ],  
+        accountUsers: 0,
+    },
+    
+    methods: {
+        getAccountUsers(index) {
+            this.accountUsers = index;
+        },
     }
 })
