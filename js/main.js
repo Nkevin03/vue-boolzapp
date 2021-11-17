@@ -92,11 +92,23 @@ const app = new Vue ({
             },
         ],  
         accountUsers: 0,
+        newMessage: '',
     },
     
     methods: {
         getAccountUsers(index) {
             this.accountUsers = index;
+        },
+
+        sendMessage() {
+            if(this.newMessage.length > 0) {
+                this.contacts[this.accountUsers].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: this.newMessage,
+                    status: 'sent',
+                },);
+                this.newMessage = '';
+            }
         },
     }
 })
