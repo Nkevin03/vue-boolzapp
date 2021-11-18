@@ -120,5 +120,15 @@ const app = new Vue ({
                 },);
             },1000);
         },
+        
+        SearchUsers() {
+            for (let i = 0; i < this.contacts.length; i++) {
+                if (this.contacts[i].name.toLowerCase().includes(this.searchFor.toLowerCase())) {
+                    this.contacts[i].visible = true;
+                } else {
+                    this.contacts[i].visible = false;
+                }
+            }
+        },
     }
 })

@@ -42,11 +42,11 @@
                 </div>
                 <!-- Search chat -->
                 <div class="search-chat">
-                    <i class="fas fa-search"></i><input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <i class="fas fa-search"></i><input v-model="searchFor" type="text" placeholder="Cerca o inizia una nuova chat" @keyup="SearchUsers()">
                 </div>
                 <!-- Chat aside -->
                 <div class="chat-aside">
-                    <div v-for="(person, index) in contacts" class="contact-chat" @click="getAccountUsers(index)">
+                    <div v-for="(person, index) in contacts" class="contact-chat" @click="getAccountUsers(index)" v-show="contacts[index].visible">
                         <div class="users">
                             <img :src=`./img/avatar${contacts[index].avatar}.jpg` alt="">
                             <h3>{{contacts[index].name}}</h3>
@@ -61,7 +61,7 @@
                         <img :src=`./img/avatar${contacts[accountUsers].avatar}.jpg` alt="avatar_1">
                         <div class="info-user">
                             <h3>{{contacts[accountUsers].name}}</h3>
-                            <p>Ultimo accesso</p>
+                            <p>Online</p>
                         </div>
                         <div class="icon">
                             <i class="fas fa-circle-notch"></i>
